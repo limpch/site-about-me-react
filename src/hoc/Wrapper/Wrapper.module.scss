@@ -1,0 +1,24 @@
+.Wrapper {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg-clr);
+}
+
+.light {
+	--bg-clr: #e5e5e5;
+	--bg-container-clr:  #dedede;
+	--text-clr: #353535;
+	--main-clr: #6200ee;
+	--second-clr: #bb86fc;
+	
+}
+
+.dark {
+	--bg-clr: #202020;
+	--bg-container-clr:  #353535;
+	--text-clr: #e5e5e5;
+	--main-clr: #bb86fc;
+	--second-clr: #6200ee;
+}

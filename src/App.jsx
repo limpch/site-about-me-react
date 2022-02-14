@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { PageContainer } from "./hoc/PageContainer/PageContainer";
 import { Wrapper } from "./hoc/Wrapper/Wrapper";
 import { Main } from "./pages/main-page/Main";
 

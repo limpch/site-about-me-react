@@ -1,0 +1,25 @@
+
+.navLink {
+ 	color: var(--text-clr);
+	 transition: all 0.3s ease 0s;
+}
+.navLink:hover {
+	color: var(--main-clr);
+	text-shadow: var(--txt-shadow);
+	
+ }
+
+.activeLink {
+	position: relative;
+	transition: all 0.3s ease 0s;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		margin: -2.5px 0px 0px 0px;
+		left: -12px;
+		width: 5px;
+		height: 5px;
+		background-color: var(--main-clr);
+	}
+}

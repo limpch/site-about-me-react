@@ -1,15 +1,16 @@
 import { Outlet } from 'react-router-dom'
-import { PageContainer } from '../PageContainer/PageContainer'
+import { Nav } from '../../components/Nav/Nav'
 import '../../nullstyle.scss'
 import classes from './Wrapper.module.scss'
+
 
 export const Wrapper = ({}) => {
   return (
 	 <div className={[classes.Wrapper, classes.dark].join(' ')}>
-		<PageContainer>
-			
+		<div className={classes.PageContainer}>
+			<Nav />
 			<Outlet/>
-		</PageContainer>
+		</div>
 	 </div>
   )
 }

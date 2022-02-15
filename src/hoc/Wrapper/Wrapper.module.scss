@@ -7,14 +7,16 @@
 	align-items: center;
 	background-color: var(--bg-clr);
 	font-family: 'Montserrat';
+	overflow: hidden;
 }
 
 .PageContainer {
 	width: 100%;
-	max-width: 700px;
+	max-width: 900px;
 	height: auto;
 	background-color: var(--bg-container-clr);
 	padding: 20px 30px;
+
 }
 
 

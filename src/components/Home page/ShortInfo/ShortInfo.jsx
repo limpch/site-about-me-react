@@ -1,12 +1,13 @@
 import ReactTypingEffect from 'react-typing-effect'
+import { NameAnimate } from '../../Custom/NameAnimate/NameAnimate';
 import classes from './ShortInfo.module.scss'
 
 export const ShortInfo = () => {
   return (
 	<div className={classes.Shortinfo}>
-		<div>Hello, I'm Roman Lipka</div>
+		<div>Hello, I am <NameAnimate className={classes.letter} text="Roman Lipka"/></div>
 		<ReactTypingEffect
-			text={["React developer", "HTML coder", "Junior Front-end developer"]}
+			text={["React developer", "HTML coder", "Junior Front-end programmer"]}
 			cursorRenderer={cursor => <div>{cursor}</div>}
 			displayTextRenderer={(text, i) => {
 				return (

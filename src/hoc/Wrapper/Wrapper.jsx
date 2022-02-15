@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import { useRef } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Nav } from '../../components/Nav/Nav'
 import '../../nullstyle.scss'
@@ -5,12 +7,20 @@ import classes from './Wrapper.module.scss'
 
 
 export const Wrapper = ({}) => {
+
+	const wrapperRef = useRef(null)
+
   return (
-	 <div className={[classes.Wrapper, classes.dark].join(' ')}>
-		<div className={classes.PageContainer}>
+	 <div ref={wrapperRef} className={[classes.Wrapper, classes.dark].join(' ')}>
+		<motion.div 
+		drag
+		dragConstraints={wrapperRef}
+		className={classes.PageContainer}
+		
+		>
 			<Nav />
 			<Outlet/>
-		</div>
+		</motion.div>
 	 </div>
   )
 }

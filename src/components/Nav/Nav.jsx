@@ -1,4 +1,4 @@
-import { CuLink } from "../CuLink/CuLink"
+import { CuLink } from "../Custom/CuLink/CuLink"
 import classes from './Nav.module.scss'
 
 

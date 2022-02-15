@@ -1,0 +1,41 @@
+.Options {
+  font-size: 24px;
+  h3 {
+    display: block;
+    margin: 0px 0px 15px 0px;
+	 text-align: end;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+	 flex-direction: row-reverse;
+  }
+}
+.Theme {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: var(--main-clr) 1px solid;
+  margin: 0px 0px 0px 30px;
+}
+
+.Lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--text-clr);
+  color: var(--bg-clr);
+  margin: 0px 0px 0px 30px;
+  font-size: 16px;
+  font-weight: 500;
+}

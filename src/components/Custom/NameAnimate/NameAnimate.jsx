@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { CuLink } from "../CuLink/CuLink"
 
 export const NameAnimate = ({text, className}) => {
 	const keyframes = {
@@ -16,8 +17,9 @@ export const NameAnimate = ({text, className}) => {
 	let innerText = text
 	innerText = innerText.split('')
 	return (
-		innerText.map(letter => 
+		innerText.map((letter, index) => 
 			<motion.span
+			key={index}
 			variants={keyframes}
 			initial={'from'}
 			whileHover={'to'}
@@ -26,7 +28,9 @@ export const NameAnimate = ({text, className}) => {
 			}}
 			className={className}
 			>
-				{letter}
+				<CuLink to={'about-me'} >
+					{letter}
+				</CuLink>
 			</motion.span>
 		)
 	)

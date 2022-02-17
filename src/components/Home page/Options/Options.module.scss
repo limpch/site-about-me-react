@@ -15,6 +15,13 @@
     justify-content: flex-start;
     align-items: center;
 	 flex-direction: row-reverse;
+	 p {
+		 transition: all 0.5s ease 0s;
+		 opacity: 0;
+	 }
+	 p.active {
+		 opacity: 1;
+	 }
   }
 }
 .Theme {
@@ -22,8 +29,18 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: var(--main-clr) 1px solid;
+  border: var(--main-clr) 2px solid;
   margin: 0px 0px 0px 30px;
+  position: relative;
+  overflow: hidden;
+  span {
+	  position: absolute;
+	  width: 400%;
+	  height: 100%;
+	  background: linear-gradient(90deg, var(--main-clr) 0%, var(--main-clr) 50%, var(--bg-container-clr) 50%, var(--bg-container-clr) 100%);
+	  cursor: pointer;
+  }
+  cursor: pointer;
 }
 
 .Lang {
@@ -34,8 +51,9 @@
   height: 35px;
   border-radius: 50%;
   background: var(--text-clr);
-  color: var(--bg-clr);
+  color: var(--bg-container-clr);
   margin: 0px 0px 0px 30px;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 }

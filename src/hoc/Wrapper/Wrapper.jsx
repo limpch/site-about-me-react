@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { AnimateSharedLayout, motion } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Nav } from '../../components/Nav/Nav'
@@ -19,30 +19,14 @@ export const Wrapper = ({}) => {
 	 ref={wrapperRef} 
 	 className={[classes.Wrapper, classes.dark].join(' ')}
 	 >
-		<motion.div 
-		drag
-		dragConstraints={wrapperRef}
-		className={classes.PageContainer}
-		initial={{
-			scale: 0.5,
-			opacity: 0,
-		}}
-		animate={{
-			scale: 1,
-			opacity: 1,
-			boxShadow: 'var(--txt-shadow)'
-		}}
-		transition={{
-			duration: duration
-		}}
-		whileTap={{
-			scale: 0.96,
-			boxShadow: '0px 0px 0px #808080',
-		}}
-		>
-			<Nav />
-			<Outlet/>
-		</motion.div>
+		<AnimateSharedLayout>
+			<motion.div 
+			layout
+			className={classes.PageContainer}>
+				<Nav />
+				<Outlet/>
+			</motion.div>
+		</AnimateSharedLayout>
 	 </div>
   )
 }

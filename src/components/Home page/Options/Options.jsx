@@ -15,7 +15,7 @@ export const Options = () => {
 			<li onMouseEnter={() => setActiveFirst(classes.active)} onMouseLeave={() => setActiveFirst('')}><span className={classes.Theme}>
 			<motion.span
 				initial={{left: '-200%'}}
-				whileHover={{left: '0%'}}
+				whileHover={{left: '-50%'}}
 			></motion.span>
 			</span><p className={isActiveFirst}>Change theme</p></li>
 			<li 

@@ -13,6 +13,7 @@ export const Options = () => {
 	 <div className={classes.Options}>
 		 <h3>{DATA.eng.home.settings[0]}</h3>
 		 <ul>
+
 			<li>
 				<motion.span
 					className={classes.Theme}
@@ -25,7 +26,6 @@ export const Options = () => {
 				</motion.span>
 				<p className={isActiveFirst}>{DATA.eng.home.settings[1]}</p>
 			</li>
-
 
 			<li 
 			onMouseEnter={() => setActiveSecond(classes.active)} 

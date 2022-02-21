@@ -2,7 +2,7 @@
 .navLink {
  	color: var(--text-clr);
 	transition: color 0.3s ease 0s,
-	text-shadow 0.3s ease 0s,;
+	text-shadow 0.3s ease 0s;
 	cursor: pointer; 
 }
 .navLink:hover {
@@ -12,6 +12,7 @@
 
 .activeLink {
 	//border-bottom: 2px solid var(--main-clr);
+
 	cursor: default !important;
 	&:hover {
 		color: var(--text-clr);

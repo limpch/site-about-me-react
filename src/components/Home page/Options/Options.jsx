@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { DATA } from '../../../DATA'
 import classes from './Options.module.scss'
 
 export const Options = () => {
@@ -10,14 +11,22 @@ export const Options = () => {
 
   return (
 	 <div className={classes.Options}>
-		 <h3>Settings</h3>
+		 <h3>{DATA.eng.home.settings[0]}</h3>
 		 <ul>
-			<li onMouseEnter={() => setActiveFirst(classes.active)} onMouseLeave={() => setActiveFirst('')}><span className={classes.Theme}>
-			<motion.span
-				initial={{left: '-200%'}}
-				whileHover={{left: '-50%'}}
-			></motion.span>
-			</span><p className={isActiveFirst}>Change theme</p></li>
+			<li>
+				<motion.span
+					className={classes.Theme}
+					onMouseEnter={() => setActiveFirst(classes.active)} 
+					onMouseLeave={() => setActiveFirst('')}>
+						<motion.span
+							initial={{left: '-300%'}}
+							whileHover={{left: '-50%'}}
+						></motion.span>
+				</motion.span>
+				<p className={isActiveFirst}>{DATA.eng.home.settings[1]}</p>
+			</li>
+
+
 			<li 
 			onMouseEnter={() => setActiveSecond(classes.active)} 
 			onMouseLeave={() => setActiveSecond('')}
@@ -30,12 +39,18 @@ export const Options = () => {
 				whileHover={{
 					translateX: [0,4,-4,4,-4,4,-4,0]
 				}}
-				onMouseEnter={() => setTimeout(() => {setLangText('ENG')},300)}
-				onMouseLeave	={() => setLangText('RU')}
+				onMouseEnter={() => {
+					setTimeout(() => {setLangText('ENG')},300)
+					setActiveSecond(classes.active)
+					}}
+				onMouseLeave	={() => {
+					setLangText('RU')
+					setActiveSecond('')
+					}}
 				>
 				{langText}
 				</motion.span>
-				<p className={isActiveSecond}>Change language</p>
+				<p className={isActiveSecond}>{DATA.eng.home.settings[2]}</p>
 			</li>
 		 </ul>
 	 </div>

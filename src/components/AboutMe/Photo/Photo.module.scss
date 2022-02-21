@@ -1,0 +1,26 @@
+.Photo {
+	position: relative;
+	padding: 15px;
+	
+}
+
+.Me {
+	position: relative;
+	z-index: 3;
+	filter: drop-shadow(var(--txt-shadow));
+}
+
+.Block {
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: var(--main-clr);
+}
+
+.Points {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}

@@ -1,0 +1,14 @@
+.Inform {
+	p {
+		color: var(--text-clr);
+		font-size: 18px;
+		line-height: 22px;
+	}
+	a {
+		color: var(--main-clr);
+		&:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+}

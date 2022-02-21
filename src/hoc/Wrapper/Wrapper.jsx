@@ -24,7 +24,13 @@ export const Wrapper = ({}) => {
 			layout
 			className={classes.PageContainer}>
 				<Nav />
-				<Outlet/>
+				<motion.div
+					//animate={{height: 0}}
+					initial={{height: 'auto'}}
+					style={{overflow: 'hidden'}}
+				>
+					<Outlet/>
+				</motion.div>
 			</motion.div>
 		</AnimateSharedLayout>
 	 </div>
